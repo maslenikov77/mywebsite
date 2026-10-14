@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Denis Maslenikov — Веб‑дизайнер и фронтенд‑разработчик</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    :root {
+      --bg: #0f172a;
+      --fg: #e5e7eb;
+      --accent: #38bdf8;
+      --muted: #9ca3af;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px 16px 64px;
+    }
+
+    header {
+      padding: 48px 0 32px;
+    }
+
+    .header-row-vertical {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 20px;
+      margin-bottom: 32px;
+    }
+
+    .profile-photo-rect {
+      width: 360px;
+      object-fit: contain;
+      background-color: #0f172a;
+      border-radius: 12px;
+      border: 3px solid #1f2937;
+    }
+
+    .tagline {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      margin: 12px 0 8px;
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 520px;
+    }
+
+    .cta {
+      margin-top: 24px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: 1px solid var(--accent);
+      font-size: 0.95rem;
+      cursor: pointer;
+      background: transparent;
+      color: var(--fg);
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #0f172a;
+      border-color: var(--accent);
+    }
+
+    .btn img {
+      margin-right: 8px;
+      border-radius: 3px;
+    }
+
+    section {
+      margin-top: 40px;
+      padding-top: 16px;
+      border-top: 1px solid #1f2937;
+    }
+
+    section h2 {
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    @media (min-width: 720px) {
+      .grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    .card {
+      padding: 14px 16px;
+      border-radius: 12px;
+      border: 1px solid #1f2937;
+      background: #020617;
+    }
+
+    .label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .small {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+
+      <div class="header-row-vertical">
+        <img src="images/my-photo.png" alt="Denis Maslenikov" class="profile-photo-rect">
+
+        <div class="tagline">Web Design · Frontend · UX</div>
+
+        <h1>Denis Maslenikov</h1>
+
+        <p class="subtitle">
+          Я создаю современные, быстрые и понятные сайты, которые помогают бизнесу
+          доносить ценность, вызывать доверие и превращать посетителей в клиентов.
+        </p>
+      </div>
+
+      <div class="cta">
+        <a class="btn btn-primary" href="mailto:sanmaksas@gmail.com">Связаться по email</a>
+        <a class="btn" href="#portfolio">Смотреть работы</a>
+
+        <a class="btn" href="index-en.html">
+          <img src="https://flagcdn.com/gb.svg" width="22" alt="English"> English
+        </a>
+      </div>
+
+    </header>
+
+    <section id="about">
+      <h2>Обо мне</h2>
+      <p>
+        Я создаю сайты с акцентом на ясность, удобство и высокую скорость работы.
+        В моей работе сочетаются структурная вёрстка, продуманная типографика и адаптивный фронтенд,
+        чтобы сайт выглядел и работал идеально на любом устройстве.
+      </p>
+      <p>
+        Если вам нужен сайт‑визитка, лендинг, портфолио или небольшой сайт для бизнеса —
+        я превращу вашу идею в аккуратный, функциональный и визуально цельный продукт.
+      </p>
+    </section>
+
+    <section id="services">
+      <h2>Что я делаю</h2>
+      <div class="grid grid-2">
+
+        <div class="card">
+          <div class="label">Редизайн сайта</div>
+          <p>Обновление существующего сайта: современный дизайн, улучшенный UX, высокая скорость и аккуратная структура. Без создания с нуля.</p>
+        </div>
+
+        <div class="card">
+          <div class="label">Новый лендинг</div>
+          <p>Одностраничный сайт, который продаёт. Чистый дизайн, понятная структура, адаптивная вёрстка и высокая конверсия.</p>
+        </div>
+
+        <div class="card">
+          <div class="label">Полноценный сайт</div>
+          <p>Многостраничный сайт для компаний и брендов. Дизайн всех страниц, удобная навигация, единый стиль и современная вёрстка.</p>
+        </div>
+
+        <div class="card">
+          <div class="label">Перевод и локализация</div>
+          <p>Профессиональный перевод RU/EN для сайтов и интерфейсов. Чёткий, точный и адаптированный под аудиторию текст.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="portfolio">
+      <h2>Портфолио</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <div class="label">Личный сайт</div>
+          <p>Минималистичный одностраничный сайт с чистой структурой, аккуратной типографикой и современной вёрсткой.</p>
+          <p class="small"><a href="#" target="_blank">Ссылка</a></p>
+        </div>
+
+        <div class="card">
+          <div class="label">Проект клиента</div>
+          <p>Коммерческий лендинг с акцентом на читабельность, мобильный опыт и конверсионный UX.</p>
+          <p class="small">
+            <a href="https://maslenikov77.github.io/my-website/index.html" target="_blank">Ссылка на проект</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Контакты</h2>
+      <p>
+        Готов помочь с вашим проектом — будь то редизайн, новый лендинг или полноценный сайт.
+      </p>
+      <p class="small">
+        Email: <a href="mailto:sanmaksas@gmail.com">sanmaksas@gmail.com</a><br>
+        Telegram: <a href="https://t.me/sanmaksas1" target="_blank">@sanmaksas1</a><br>
+      </p>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Denis Maslenikov · Web design & frontend
+    </footer>
+  </div>
+
+  <!-- Счётчик посетителей -->
+  <script src="https://www.freecounterstat.com/count/your-id"></script>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
+
+
+
+
+
+
